@@ -1,7 +1,7 @@
-var express = require('express')
-var router = express.Router()
-var hnLatestStream = require('hn-latest-stream')
-var finished = require('stream').finished
+const express = require('express')
+const router = express.Router()
+const hnLatestStream = require('hn-latest-stream')
+const finished = require('stream').finished
 
 router.get('/', function(req, res, next) {
   const { amount = 10, type = 'html'} = req.query
